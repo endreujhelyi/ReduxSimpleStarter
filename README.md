@@ -1,3 +1,3 @@
 # ReduxSimpleStarter
 
-Following this [Redux](https://www.udemy.com/react-redux/) learning course on [Udemy](https://www.udemy.com).
+Practicing REACT/REDUX with [THIS](https://www.udemy.com/react-redux/) learning course from [Udemy](https://www.udemy.com).

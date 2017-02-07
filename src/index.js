@@ -4,9 +4,8 @@ import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
-
-// accepting requests only from my IP address
-const API_KEY = 'AIzaSyDZ5-Dh4LIDugbzGG0QyfqGlMqUKu28msY';
+import VideoDetail from './components/video_detail';
+import VARS from '../vars';
 
 
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
 
     this.state = { videos: [] };
 
-    YTSearch({key: API_KEY, term: 'surfboards'}, videos => {
+    YTSearch({key: VARS.API_KEY, term: 'till we drop'}, videos => {
       this.setState({ videos });
     });
   }
@@ -24,6 +23,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[0]}/>
         <VideoList videos={this.state.videos} />
       </div>
     );
